@@ -62,7 +62,6 @@ def process_package_settings(package):
         new_settings = package['settings']
     except KeyError as e:
         raise InvalidConfig(str(e))
-        
     try:
         package_settings = lock_setting_file(settings_file)
     except InvalidJSON:
